@@ -92,6 +92,7 @@
 		4C74A70B20004DC300CF1206 = {
 			isa = PBXGroup;
 			children = (
+				4C58EEC520068DA200812E51 /* README.md */,
 				4C74A71620004DC300CF1206 /* Orrery */,
 				4C74A72B20004DC300CF1206 /* OrreryTests */,
 				4C74A73620004DC300CF1206 /* OrreryUITests */,
@@ -125,7 +126,6 @@
 				4C74A71F20004DC300CF1206 /* Main.storyboard */,
 				4C74A72220004DC300CF1206 /* Info.plist */,
 				4C74A72320004DC300CF1206 /* Orrery.entitlements */,
-				4C58EEC520068DA200812E51 /* README.md */,
 			);
 			path = Orrery;
 			sourceTree = "<group>";

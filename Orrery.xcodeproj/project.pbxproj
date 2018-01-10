@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C58EEB4200433B600812E51 /* OrbitalPositions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58EEB3200433B600812E51 /* OrbitalPositions.m */; };
+		4C58EEB7200440DD00812E51 /* OrbitalPositionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C58EEB6200440DD00812E51 /* OrbitalPositionTests.m */; };
+		4C58EEC02005F5BF00812E51 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58EEBF2005F5BE00812E51 /* OptionsViewController.swift */; };
+		4C58EEC22006008500812E51 /* OrreryWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58EEC12006008500812E51 /* OrreryWindow.swift */; };
+		4C58EEC4200600A500812E51 /* OptionsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58EEC3200600A500812E51 /* OptionsWindow.swift */; };
 		4C74A71820004DC300CF1206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74A71720004DC300CF1206 /* AppDelegate.swift */; };
-		4C74A71A20004DC300CF1206 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74A71920004DC300CF1206 /* GameViewController.swift */; };
-		4C74A71C20004DC300CF1206 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C74A71B20004DC300CF1206 /* art.scnassets */; };
 		4C74A71E20004DC300CF1206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C74A71D20004DC300CF1206 /* Assets.xcassets */; };
 		4C74A72120004DC300CF1206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C74A71F20004DC300CF1206 /* Main.storyboard */; };
 		4C74A72D20004DC300CF1206 /* OrreryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74A72C20004DC300CF1206 /* OrreryTests.swift */; };
 		4C74A73820004DC300CF1206 /* OrreryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74A73720004DC300CF1206 /* OrreryUITests.swift */; };
+		4C74A748200161C600CF1206 /* OrreryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74A747200161C500CF1206 /* OrreryViewController.swift */; };
+		4C74A74C200171C200CF1206 /* CelestialBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74A74B200171C200CF1206 /* CelestialBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C58EEB12004318B00812E51 /* Orrery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Orrery-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C58EEB2200433B600812E51 /* OrbitalPositions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrbitalPositions.h; sourceTree = "<group>"; };
+		4C58EEB3200433B600812E51 /* OrbitalPositions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrbitalPositions.m; sourceTree = "<group>"; };
+		4C58EEB5200440DC00812E51 /* OrreryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OrreryTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C58EEB6200440DD00812E51 /* OrbitalPositionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrbitalPositionTests.m; sourceTree = "<group>"; };
+		4C58EEBF2005F5BE00812E51 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		4C58EEC12006008500812E51 /* OrreryWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrreryWindow.swift; sourceTree = "<group>"; };
+		4C58EEC3200600A500812E51 /* OptionsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsWindow.swift; sourceTree = "<group>"; };
+		4C58EEC520068DA200812E51 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C74A71420004DC300CF1206 /* Orrery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orrery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C74A71720004DC300CF1206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C74A71920004DC300CF1206 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		4C74A71B20004DC300CF1206 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		4C74A71D20004DC300CF1206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C74A72020004DC300CF1206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C74A72220004DC300CF1206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +60,8 @@
 		4C74A73320004DC300CF1206 /* OrreryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrreryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C74A73720004DC300CF1206 /* OrreryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrreryUITests.swift; sourceTree = "<group>"; };
 		4C74A73920004DC300CF1206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C74A747200161C500CF1206 /* OrreryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrreryViewController.swift; sourceTree = "<group>"; };
+		4C74A74B200171C200CF1206 /* CelestialBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +113,19 @@
 			isa = PBXGroup;
 			children = (
 				4C74A71720004DC300CF1206 /* AppDelegate.swift */,
-				4C74A71920004DC300CF1206 /* GameViewController.swift */,
-				4C74A71B20004DC300CF1206 /* art.scnassets */,
+				4C58EEC12006008500812E51 /* OrreryWindow.swift */,
+				4C74A747200161C500CF1206 /* OrreryViewController.swift */,
+				4C58EEC3200600A500812E51 /* OptionsWindow.swift */,
+				4C58EEBF2005F5BE00812E51 /* OptionsViewController.swift */,
+				4C74A74B200171C200CF1206 /* CelestialBody.swift */,
+				4C58EEB12004318B00812E51 /* Orrery-Bridging-Header.h */,
+				4C58EEB2200433B600812E51 /* OrbitalPositions.h */,
+				4C58EEB3200433B600812E51 /* OrbitalPositions.m */,
 				4C74A71D20004DC300CF1206 /* Assets.xcassets */,
 				4C74A71F20004DC300CF1206 /* Main.storyboard */,
 				4C74A72220004DC300CF1206 /* Info.plist */,
 				4C74A72320004DC300CF1206 /* Orrery.entitlements */,
+				4C58EEC520068DA200812E51 /* README.md */,
 			);
 			path = Orrery;
 			sourceTree = "<group>";
@@ -114,6 +135,8 @@
 			children = (
 				4C74A72C20004DC300CF1206 /* OrreryTests.swift */,
 				4C74A72E20004DC300CF1206 /* Info.plist */,
+				4C58EEB6200440DD00812E51 /* OrbitalPositionTests.m */,
+				4C58EEB5200440DC00812E51 /* OrreryTests-Bridging-Header.h */,
 			);
 			path = OrreryTests;
 			sourceTree = "<group>";
@@ -195,10 +218,12 @@
 				TargetAttributes = {
 					4C74A71320004DC300CF1206 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					4C74A72720004DC300CF1206 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4C74A71320004DC300CF1206;
 					};
@@ -236,7 +261,6 @@
 			files = (
 				4C74A72120004DC300CF1206 /* Main.storyboard in Resources */,
 				4C74A71E20004DC300CF1206 /* Assets.xcassets in Resources */,
-				4C74A71C20004DC300CF1206 /* art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C74A71A20004DC300CF1206 /* GameViewController.swift in Sources */,
+				4C58EEC4200600A500812E51 /* OptionsWindow.swift in Sources */,
+				4C74A74C200171C200CF1206 /* CelestialBody.swift in Sources */,
+				4C74A748200161C600CF1206 /* OrreryViewController.swift in Sources */,
+				4C58EEC22006008500812E51 /* OrreryWindow.swift in Sources */,
 				4C74A71820004DC300CF1206 /* AppDelegate.swift in Sources */,
+				4C58EEB4200433B600812E51 /* OrbitalPositions.m in Sources */,
+				4C58EEC02005F5BF00812E51 /* OptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C58EEB7200440DD00812E51 /* OrbitalPositionTests.m in Sources */,
 				4C74A72D20004DC300CF1206 /* OrreryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,14 +449,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Orrery/Orrery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 486WCLSN49;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Orrery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.norobostudios.Orrery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Orrery/Orrery-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -435,14 +468,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Orrery/Orrery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 486WCLSN49;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Orrery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.norobostudios.Orrery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Orrery/Orrery-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -452,6 +487,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 486WCLSN49;
@@ -459,6 +495,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.norobostudios.OrreryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OrreryTests/OrreryTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orrery.app/Contents/MacOS/Orrery";
 			};
@@ -469,6 +507,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 486WCLSN49;
@@ -476,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.norobostudios.OrreryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OrreryTests/OrreryTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orrery.app/Contents/MacOS/Orrery";
 			};

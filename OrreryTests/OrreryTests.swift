@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Orrery
 
 class OrreryTests: XCTestCase {
     

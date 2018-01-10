@@ -453,7 +453,7 @@
 				CODE_SIGN_ENTITLEMENTS = Orrery/Orrery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 486WCLSN49;
 				INFOPLIST_FILE = Orrery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.norobostudios.Orrery;
@@ -472,7 +472,7 @@
 				CODE_SIGN_ENTITLEMENTS = Orrery/Orrery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 486WCLSN49;
 				INFOPLIST_FILE = Orrery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.norobostudios.Orrery;

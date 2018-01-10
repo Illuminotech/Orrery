@@ -259,6 +259,7 @@ extension OrreryViewController: OptionsViewControllerDelegate {
     func didUpdateDate(newDate:NSDate) {
         optionsDate = newDate
         cleanScene()
+        spawnSun()
         spawnPlanets()
     }
     

@@ -5,7 +5,7 @@
 
 #  Orrery for macOS
 ## Overview
-This project provides a reasonably accurate model of the 8 major planets in the solar system. The orbital mechanics for each planet were calculated based on publicly available orbital elements and the current date. A simple hud panel is provided with a slider that increases or reverses the render date, providing a rudimentary animation of the planetary orbits. The default slider position updates the planetary motion 
+This project provides a reasonably accurate model of the 8 major planets in the solar system. The orbital mechanics for each planet were calculated based on publicly available orbital elements and the current date. A simple hud panel is provided with a slider that increases or reverses the render date, providing a rudimentary animation of the planetary orbits. The default slider position updates the planetary motion
 
 ## Usage
 Scene kit provides a navigation framework for its 3d scenes. The following are the navigation methods using a trackpad:
@@ -14,16 +14,18 @@ Scene kit provides a navigation framework for its 3d scenes. The following are t
 * Click pan rotates 3d model
 
 ## Installation
-### From the command line
-1. Clone or Download the project from github.
-2. Open Terminal and navigate to the top level Orrery directory
-3. Enter the command: make run
-### From Xcode
+### General Setup
 1. Clone or Download the project from github.
 2. Open the Orrery.xcodeproj file.
 3. Click the Orrery project file in xcode.
 4. On the General tab under Signing, add your team signing credentials. (This requires an apple developer ID)
-5. Click build and run on the top left of xcode (or Command R).
+### Run from the command line
+1. Follow the general setup
+2. Open Terminal and navigate to the top level Orrery directory
+3. Enter the command: make run
+### Run from Xcode
+1. Follow the general setup
+2. Click build and run on the top left of xcode (or Command R).
 
 ## Requirements
 * macOS 10.12 or later

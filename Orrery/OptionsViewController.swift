@@ -32,12 +32,15 @@ class OptionsViewController: NSViewController {
     
     @IBAction func changeDate(sender:NSDatePicker) {
         //TODO: fix render time
+        datePicker?.isEnabled = false
         let oldDate = date
         date = NSDate(timeIntervalSinceNow: sender.dateValue.timeIntervalSinceNow)
         let success = delegate?.didUpdateDate(newDate: date)
         if success == false {
             date = oldDate
             datePicker?.dateValue = Date.init(timeIntervalSinceNow: date.timeIntervalSinceNow)
+        } else {
+            datePicker?.isEnabled = true
         }
     }
     

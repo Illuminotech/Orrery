@@ -10,7 +10,7 @@ import Foundation
 
 protocol OptionsViewControllerDelegate: class {
     func didUpdateSlider(sliderValue:Double)
-    func didUpdateDate(newDate:NSDate) -> Bool
+    func didUpdateDate(newDate:NSDate)
 }
 
 class OptionsViewController: NSViewController {
@@ -33,15 +33,9 @@ class OptionsViewController: NSViewController {
     @IBAction func changeDate(sender:NSDatePicker) {
         //TODO: fix render time
         datePicker?.isEnabled = false
-        let oldDate = date
         date = NSDate(timeIntervalSinceNow: sender.dateValue.timeIntervalSinceNow)
-        let success = delegate?.didUpdateDate(newDate: date)
-        if success == false {
-            date = oldDate
-            datePicker?.dateValue = Date.init(timeIntervalSinceNow: date.timeIntervalSinceNow)
-        } else {
-            datePicker?.isEnabled = true
-        }
+        delegate?.didUpdateDate(newDate: date)
+        datePicker?.isEnabled = true
     }
     
     func descriptiveLabel(num:Double) -> String {

@@ -23,7 +23,6 @@ class OrreryViewController: NSViewController {
     weak var repeatingTimer: Timer?
     var optionsDate: NSDate = NSDate()
     var optionsValue: Double = 0.0
-    var isWorking:Bool = false
     
     var sun:CelestialBody!
     var mercury:CelestialBody!
@@ -257,17 +256,11 @@ extension OrreryViewController: OptionsViewControllerDelegate {
         optionsValue = sliderValue
     }
     
-    func didUpdateDate(newDate:NSDate) -> Bool {
-        if isWorking {
-            return false
-        }
-        isWorking = true
+    func didUpdateDate(newDate:NSDate) {
         optionsDate = newDate
         cleanScene()
         spawnSun()
         spawnPlanets()
-        isWorking = false
-        return true
     }
     
 }

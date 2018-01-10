@@ -3,7 +3,7 @@ APP=Orrery
 #
 APP_TARGET=Orrery
 #
-TESTS_TARGET=Orrery-tests
+TESTS_TARGET=OrreryTests
 #
 PRODUCT=Orrery
 #

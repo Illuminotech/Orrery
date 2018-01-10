@@ -187,14 +187,14 @@
             <objects>
                 <viewController title="Options" storyboardIdentifier="options" id="lef-c9-gmU" customClass="OptionsViewController" customModule="Orrery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" canDrawConcurrently="YES" id="ib8-7x-xa7">
-                        <rect key="frame" x="0.0" y="0.0" width="495" height="137"/>
+                        <rect key="frame" x="0.0" y="0.0" width="495" height="112"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-3M-Ybp">
-                                <rect key="frame" x="27" y="20" width="440" height="97"/>
+                                <rect key="frame" x="27" y="20" width="440" height="72"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1mZ-xS-uNd">
-                                        <rect key="frame" x="178" y="80" width="84" height="17"/>
+                                        <rect key="frame" x="178" y="55" width="84" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Times Arrow" id="oyN-CA-zcQ">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -202,22 +202,22 @@
                                         </textFieldCell>
                                     </textField>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-cp-4t8">
-                                        <rect key="frame" x="-2" y="48" width="444" height="24"/>
+                                        <rect key="frame" x="-2" y="23" width="444" height="24"/>
                                         <sliderCell key="cell" state="on" alignment="left" minValue="-100" maxValue="100" tickMarkPosition="above" numberOfTickMarks="9" allowsTickMarkValuesOnly="YES" sliderType="linear" id="BDF-if-5bf"/>
                                         <connections>
                                             <action selector="sliderDidUpdateWithSender:" target="lef-c9-gmU" id="zes-88-M7G"/>
                                         </connections>
                                     </slider>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-U8-TkX">
-                                        <rect key="frame" x="191" y="25" width="58" height="17"/>
+                                        <rect key="frame" x="191" y="0.0" width="58" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="&lt;--0--&gt;" id="Aog-gl-Gqq">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yM5-0t-F5C">
-                                        <rect key="frame" x="185" y="0.0" width="70" height="17"/>
+                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yM5-0t-F5C">
+                                        <rect key="frame" x="185" y="55" width="70" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Start Date" id="iWe-yN-gpA">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -225,7 +225,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <datePicker hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l2M-hy-oQ4">
-                                        <rect key="frame" x="173" y="74" width="97" height="27"/>
+                                        <rect key="frame" x="173" y="49" width="97" height="27"/>
                                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="uX8-h8-NNt">
                                             <font key="font" metaFont="system"/>
                                             <date key="date" timeIntervalSinceReferenceDate="537206400">
@@ -282,6 +282,7 @@
                         <rect key="contentRect" x="0.0" y="116" width="1300" height="900"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="1000" height="800"/>
+                        <value key="minFullScreenContentSize" type="size" width="1300" height="900"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="k2e-pw-aVG"/>
                         </connections>

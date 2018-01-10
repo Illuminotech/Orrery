@@ -14,6 +14,11 @@ Scene kit provides a navigation framework for its 3d scenes. The following are t
 • Click pan rotates 3d model
 
 ## Installation
+### From the command line
+1. Clone or Download the project from github.
+2. Open Terminal and navigate to the top level Orrery directory
+3. Enter the command: make run
+### From Xcode
 1. Clone or Download the project from github.
 2. Open the Orrery.xcodeproj file.
 3. Click the Orrery project file in xcode.

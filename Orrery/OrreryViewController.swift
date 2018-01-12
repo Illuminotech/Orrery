@@ -14,6 +14,7 @@ import QuartzCore
 
 class OrreryViewController: NSViewController {
     
+    // MARK: - Properties 
     var scnView: SCNView!
     var scnScene: SCNScene!
     var cameraNode: SCNNode!
@@ -34,6 +35,8 @@ class OrreryViewController: NSViewController {
     var uranus:CelestialBody!
     var neptune:CelestialBody!
     
+    // MARK: - ViewController Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -41,11 +44,12 @@ class OrreryViewController: NSViewController {
         spawnSun()
         setupCamera()
         setupOptionsPanel()
-        //sun
         spawnPlanets()
         
     }
 
+    // MARK: - Initialization Methods
+    
     func setupOptionsPanel() {
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         optionsWindow = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "optionsWindow")) as! NSWindowController
@@ -76,6 +80,8 @@ class OrreryViewController: NSViewController {
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 50)
         scnScene.rootNode.addChildNode(cameraNode)
     }
+    
+    // MARK: - Spawn 3d Elements
     
     func spawnSun() {
     
@@ -147,6 +153,8 @@ class OrreryViewController: NSViewController {
         startRepeatingTimer()
     }
     
+    // MARK: - Update 3d Elements
+    
     func cleanScene() {
         for node in scnScene.rootNode.childNodes {
             node.removeFromParentNode()
@@ -168,12 +176,13 @@ class OrreryViewController: NSViewController {
         uranus.bodyNode.position = uranus.currentPosition(date: date)
         neptune.bodyNode.position = neptune.currentPosition(date: date)
     }
-    
+
     func drawOrbit(planet:CelestialBodies, node:CelestialBody) {
+        // TODO: turn cube markers into a solid line
         var i:Double = 0
         var planetYear:Double = 0 // a year for this planet in earth seconds
         var factor:Double = 1
-        
+
         if node.bodyName == CelestialBodies.mercury {
             planetYear = 7.603e+6
             factor = 5
@@ -199,16 +208,17 @@ class OrreryViewController: NSViewController {
             planetYear = 5.203e+9
             factor = 10
         }
-        
+
         while (i < planetYear) {
             i += (86400 * factor)
             let orbit:SCNNode = SCNNode(geometry:SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0.0))
             orbit.position = node.currentPosition(date: NSDate.init(timeIntervalSinceNow: -i))
-            orbit.opacity = CGFloat(Float((planetYear - i) / planetYear))
             scnScene.rootNode.addChildNode(orbit)
         }
-        
+
     }
+    
+    // MARK: - Timer Methods
     
     func startRepeatingTimer() {
         repeatingTimer?.invalidate()
@@ -221,7 +231,7 @@ class OrreryViewController: NSViewController {
         var timeStep:Double = 0.25
         switch optionsValue {
         case 0:
-            timeStep = 1
+            timeStep = 0.25
         case 25:
             timeStep = 604800 // one week in seconds
         case 50:
@@ -231,13 +241,13 @@ class OrreryViewController: NSViewController {
         case 100:
             timeStep = 3.154e+8 // 10 years
         case -25:
-            timeStep = -604800 // one week in seconds
+            timeStep = -604800 // - one week in seconds
         case -50:
-            timeStep = -2.628e+6 // one month
+            timeStep = -2.628e+6 // - one month
         case -75:
-            timeStep = -3.154e+7 // one year
+            timeStep = -3.154e+7 // - one year
         case -100:
-            timeStep = -3.154e+8 // 10 years
+            timeStep = -3.154e+8 // - 10 years
         default:
             timeStep = 0.25
         }
@@ -249,6 +259,7 @@ class OrreryViewController: NSViewController {
     
 }
 
+// MARK: - Options Delegate
 
 extension OrreryViewController: OptionsViewControllerDelegate {
     

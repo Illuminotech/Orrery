@@ -5,7 +5,7 @@
 
 #  Orrery for macOS
 ## Overview
-This project provides a reasonably accurate model of the 8 major planets in the solar system. The orbital mechanics for each planet were calculated based on publicly available orbital elements and the current date. A simple hud panel is provided with a slider that increases or reverses the render date, providing a rudimentary animation of the planetary orbits. The default slider position updates the planetary motion
+This project provides a reasonably accurate model of the 8 major planets in the solar system. The orbital mechanics for each planet were calculated based on publicly available orbital elements and the current date. A simple hud panel is provided with a slider that increases or reverses the render date, providing a rudimentary animation of the planetary orbits. 
 
 ## Usage
 Scene kit provides a navigation framework for its 3d scenes. The following are the navigation methods using a trackpad:

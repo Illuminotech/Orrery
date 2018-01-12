@@ -60,15 +60,19 @@ double cbrtd( double x )
     CGFloat i = ((NSNumber *)oeDict[@"i"]).doubleValue;
     CGFloat w = ((NSNumber *)oeDict[@"w"]).doubleValue;
     
+    // first and second order approximations
     CGFloat E0 = M + 180/PI * e * sind(M) * (1 + e * cosd(M));
     CGFloat E1 = E0 - (E0 - 180/PI * e * sind(E0) - M) / (1 - e * cosd(E0));
     
+    // convert to rectangular coords
     CGFloat xi = a * (cosd(E1) - e);
     CGFloat yi = a * sqrt(1 - e*e) * sind(E1);
     
+    // convert to polar coords
     CGFloat r = sqrt( xi*xi + yi*yi );
     CGFloat v = atan2d( yi, xi );
     
+    // convert to ecliptical cartisian coords
     CGFloat xeclip = r * ( cosd(N) * cosd(v+w) - sind(N) * sind(v+w) * cosd(i) );
     CGFloat yeclip = r * ( sind(N) * cosd(v+w) + cosd(N) * sind(v+w) * cosd(i) );
     CGFloat zeclip = r * sind(v+w) * sind(i);
@@ -77,6 +81,8 @@ double cbrtd( double x )
 }
 
 - (NSDictionary *)orbitalElementsFor:(CB)celestialBody dayNumber:(NSInteger)dayNumber {
+    // Load orbital elements and multipy by dayNumber
+    // TODO: optimize if possible
     NSMutableDictionary *orbitalElements = [NSMutableDictionary new];
     switch (celestialBody) {
         case CBSun: {

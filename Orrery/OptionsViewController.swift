@@ -14,6 +14,8 @@ protocol OptionsViewControllerDelegate: class {
 }
 
 class OptionsViewController: NSViewController {
+    
+    // MARK: - Properties
     @IBOutlet weak var animationSpeedSlider: NSSliderCell?
     @IBOutlet weak var datePicker: NSDatePickerCell?
     @IBOutlet weak var sliderLabel: NSTextField?
@@ -24,6 +26,8 @@ class OptionsViewController: NSViewController {
     override func viewDidLoad() {
         datePicker?.dateValue = Date.init(timeIntervalSinceNow: date.timeIntervalSinceNow)
     }
+    
+    // MARK: - IBActions
     
     @IBAction func sliderDidUpdate(sender:NSSlider) {
         sliderLabel?.stringValue = descriptiveLabel(num: sender.doubleValue)
@@ -37,6 +41,8 @@ class OptionsViewController: NSViewController {
         delegate?.didUpdateDate(newDate: date)
         datePicker?.isEnabled = true
     }
+    
+    // MARK: - Helper Fuction
     
     func descriptiveLabel(num:Double) -> String {
         var labelName:String

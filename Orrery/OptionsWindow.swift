@@ -9,5 +9,5 @@
 import Foundation
 
 class OptionsWindow: NSPanel {
-    
+    // Empty class needed to silence console warning.
 }

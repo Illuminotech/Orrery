@@ -9,5 +9,5 @@
 import Foundation
 
 class OrreryWindow: NSWindow {
-    
+    // Empty class needed to silence console warning.
 }

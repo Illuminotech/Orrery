@@ -32,17 +32,16 @@ class CelestialBody:NSObject {
     
     var bodyName:CelestialBodies
     var bodyNode:SCNNode
-    var distanceFromSun:CGFloat
     
     
     init(body:CelestialBodies) {
         bodyName = body
         bodyNode = SCNNode(geometry: SCNSphere(radius: 1.0))
-        distanceFromSun = 1.0
         super.init()
         
         switch body {
         case .sun:
+            // Add a Subjective scaling factor to improve the planets UI.
             bodyNode = celestialFromValues(radius: 0.432228 * 0.5)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "sunmap"))
         case .mercury:
@@ -70,7 +69,7 @@ class CelestialBody:NSObject {
             bodyNode = celestialFromValues(radius: 0.15299 * 0.50)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "neptunemap"))
         
-            // TODO: figure out what to do with dwarfs
+            // TODO: add dwarf planets to the model
         case .pluto:
             bodyNode = celestialFromValues(radius: 0.007384)
         case .eris:

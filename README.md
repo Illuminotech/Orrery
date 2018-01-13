@@ -1,7 +1,5 @@
-//
-//  Created by Michael Golden on 1/8/18.
-//  Copyright © 2018 norobostudios. All rights reserved.
-//
+
+
 
 #  Orrery for macOS
 ## Overview
@@ -38,3 +36,6 @@ This project has been written in a mixture of Swift, Objective C and C. The clas
 * Orbital mechanics calculations and elements provided by: http://www.stjarnhimlen.se/comp/tutorial.html
 * Background knowledge and a working example http://lab.la-grange.ca/en/building-jsorrery-a-javascript-webgl-solar-system
 * Planet textures: http://planetpixelemporium.com/planets.html
+
+Created by Michael Golden on 1/8/18.
+Copyright © 2018 norobostudios. All rights reserved.

@@ -30,7 +30,7 @@ Scene kit provides a navigation framework for its 3d scenes. The following are t
 * xcode 9.2 or later
 
 ## Notes & Caveats
-This project has been written in a mixture of Swift, Objective C and C. The class OrbitalPositions was written in objective c because Swift still has a difficult time with simple math operations. This is still a work in progress and has not been fully tested. Specifically, Unit Tests are only included for the cartisianPositionForPlanet: method on OrbitalPositions and the scene kit render loop is not yet fully optimized. One feature in particular that I would like to improve is the orbital path lines. Currently this is done by calculating positions along the orbit of a given planet and adding a primitive shape. This process, however, is expensive and results in the addition of many tiny cubes on zoom. 
+This project has been written in a mixture of Swift, Objective C and C. The class OrbitalPositions was written in objective c because Swift still has a difficult time with simple math operations. This is still a work in progress and has not been fully tested. Specifically, Unit Tests are only included for the cartisianPositionForPlanet: method on OrbitalPositions and the scene kit render loop could be optimized further.
 
 ## Acknowledgements
 * Orbital mechanics calculations and elements provided by: http://www.stjarnhimlen.se/comp/tutorial.html

@@ -178,23 +178,22 @@ class OrreryViewController: NSViewController {
     }
 
     func drawOrbit(planet:CelestialBodies, node:CelestialBody) {
-        // TODO: turn cube markers into a solid line
         var i:Double = 0
         var planetYear:Double = 0 // a year for this planet in earth seconds
         var factor:Double = 1
 
         if node.bodyName == CelestialBodies.mercury {
-            planetYear = 7.603e+6
-            factor = 5
+            planetYear = 7.603e+6 + 1e+5 //extra factor to close the orbit line
+            factor = 1
         } else if node.bodyName == CelestialBodies.venus {
-            planetYear = 1.944e+7
-            factor = 5
+            planetYear = 1.944e+7 + 1e+5
+            factor = 2
         } else if node.bodyName == CelestialBodies.earth {
-            planetYear = 3.154e+7
-            factor = 5
+            planetYear = 3.154e+7 + 1e+5
+            factor = 3
         } else if node.bodyName == CelestialBodies.mars {
-            planetYear = 5.936e+7
-            factor = 5
+            planetYear = 5.936e+7 + 1e+5
+            factor = 4
         } else if node.bodyName == CelestialBodies.jupiter {
             planetYear = 3.784e+8
             factor = 5
@@ -203,19 +202,27 @@ class OrreryViewController: NSViewController {
             factor = 10
         } else if node.bodyName == CelestialBodies.uranus {
             planetYear = 2.6585e+9
-            factor = 10
+            factor = 15
         } else if node.bodyName == CelestialBodies.neptune {
             planetYear = 5.203e+9
-            factor = 10
+            factor = 20
         }
-
+        
+        var orbitPrevious:SCNNode?
         while (i < planetYear) {
             i += (86400 * factor)
-            let orbit:SCNNode = SCNNode(geometry:SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0.0))
-            orbit.position = node.currentPosition(date: NSDate.init(timeIntervalSinceNow: -i))
-            scnScene.rootNode.addChildNode(orbit)
+            let orbitCurrent = SCNNode()
+            orbitCurrent.position = node.currentPosition(date: NSDate.init(timeIntervalSinceNow: -i))
+            
+            if  orbitPrevious != nil {
+                let line = SCNNode()
+                line.geometry = SCNGeometry.lineFrom(vector: (orbitPrevious?.position)!, toVector: orbitCurrent.position)
+                scnScene.rootNode.addChildNode(line)
+            }
+            
+            orbitPrevious = orbitCurrent
         }
-
+        
     }
     
     // MARK: - Timer Methods
@@ -274,4 +281,17 @@ extension OrreryViewController: OptionsViewControllerDelegate {
         spawnPlanets()
     }
     
+}
+
+extension SCNGeometry {
+    class func lineFrom(vector vector1: SCNVector3, toVector vector2: SCNVector3) -> SCNGeometry {
+        let indices: [Int32] = [0, 1]
+        
+        let source = SCNGeometrySource(vertices: [vector1, vector2])
+        let element = SCNGeometryElement(indices: indices, primitiveType: .line)
+        
+        return SCNGeometry(sources: [source], elements: [element])
+        
+    }
+
 }

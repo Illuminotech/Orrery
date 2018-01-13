@@ -41,20 +41,21 @@ class CelestialBody:NSObject {
         
         switch body {
         case .sun:
-            // Add a Subjective scaling factor to improve the planets UI.
+            // First number is objects radius at 1/1000000 miles scale
+            // Second number is a subjective scaling factor to improve the planets UI.
             bodyNode = celestialFromValues(radius: 0.432228 * 0.5)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "sunmap"))
         case .mercury:
-            bodyNode = celestialFromValues(radius: 0.01516)
+            bodyNode = celestialFromValues(radius: 0.001516 * 10)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "mercurymap"))
         case .venus:
-            bodyNode = celestialFromValues(radius: 0.03760)
+            bodyNode = celestialFromValues(radius: 0.003760 * 10)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "venusmap"))
         case .earth:
-            bodyNode = celestialFromValues(radius: 0.03959)
+            bodyNode = celestialFromValues(radius: 0.003959 * 10)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "earthmap1k"))
         case .mars:
-            bodyNode = celestialFromValues(radius: 0.02106)
+            bodyNode = celestialFromValues(radius: 0.002106 * 10)
             bodyNode.geometry?.firstMaterial?.diffuse.contents = NSImage(named: NSImage.Name(rawValue: "mars_1k_color"))
         case .jupiter:
             bodyNode = celestialFromValues(radius: 0.43441 * 0.50)
@@ -71,15 +72,15 @@ class CelestialBody:NSObject {
         
             // TODO: add dwarf planets to the model
         case .pluto:
-            bodyNode = celestialFromValues(radius: 0.007384)
+            bodyNode = celestialFromValues(radius: 0.0007384)
         case .eris:
-            bodyNode = celestialFromValues(radius: 0.007227)
+            bodyNode = celestialFromValues(radius: 0.0007227)
         case .ceres:
-            bodyNode = celestialFromValues(radius: 0.00294)
+            bodyNode = celestialFromValues(radius: 0.000294)
         case .haumea:
-            bodyNode = celestialFromValues(radius: 0.00507)
+            bodyNode = celestialFromValues(radius: 0.000507)
         case .makemake:
-            bodyNode = celestialFromValues(radius: 0.00717)
+            bodyNode = celestialFromValues(radius: 0.000717)
         }
     }
     

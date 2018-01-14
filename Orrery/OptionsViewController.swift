@@ -25,6 +25,9 @@ class OptionsViewController: NSViewController {
     
     override func viewDidLoad() {
         datePicker?.dateValue = Date.init(timeIntervalSinceNow: date.timeIntervalSinceNow)
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:Notification.Name(rawValue:"DateChangeNotification"),
+                       object:nil, queue:nil, using:updateDate)
     }
     
     // MARK: - IBActions
@@ -41,6 +44,16 @@ class OptionsViewController: NSViewController {
         delegate?.didUpdateDate(newDate: date)
         datePicker?.isEnabled = true
     }
+ 
+    func updateDate(notification:Notification) -> Void {
+        
+        guard let userInfo = notification.userInfo,
+            let date = userInfo["date"] as? NSDate else {
+                print("No date found in notification")
+                return
+        }
+        datePicker?.dateValue = Date(timeIntervalSinceNow:date.timeIntervalSinceNow)
+    }
     
     // MARK: - Helper Fuction
     
@@ -48,25 +61,25 @@ class OptionsViewController: NSViewController {
         var labelName:String
         switch num {
         case 0:
-            labelName = "<--1 Second-->"
+            labelName = "<--Static-->"
         case 25:
-            labelName = "week per second"
+            labelName = "week per step"
         case 50:
-            labelName = "month per second"
+            labelName = "month per step"
         case 75:
-           labelName = "year per second"
+           labelName = "year per step"
         case 100:
-            labelName = "10 years per second"
+            labelName = "10 years per step"
         case -25:
-            labelName = "-week per second"
+            labelName = "-week per step"
         case -50:
-            labelName = "-month per second"
+            labelName = "-month per step"
         case -75:
-            labelName = "-year per second"
+            labelName = "-year per step"
         case -100:
-            labelName = "-10 years per second"
+            labelName = "-10 years per step"
         default:
-            labelName = "<--1 Second-->"
+            labelName = "<--Static-->"
         }
         return labelName
     }

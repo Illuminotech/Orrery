@@ -11,19 +11,19 @@ import SceneKit
 import SpriteKit
 import QuartzCore
 
-
 class OrreryViewController: NSViewController {
     
-    // MARK: - Properties 
+    // MARK: - Properties
     var scnView: SCNView!
     var scnScene: SCNScene!
     var cameraNode: SCNNode!
     var optionsWindow: NSWindowController!
     var optionsVC: OptionsViewController!
     var animationInterval: TimeInterval = 1
-    weak var repeatingTimer: Timer?
     var optionsDate: NSDate = NSDate()
     var optionsValue: Double = 0.0
+    
+    weak var repeatingTimer: Timer?
     
     var sun:CelestialBody!
     var mercury:CelestialBody!
@@ -175,6 +175,12 @@ class OrreryViewController: NSViewController {
         saturn.bodyNode.position = saturn.currentPosition(date: date)
         uranus.bodyNode.position = uranus.currentPosition(date: date)
         neptune.bodyNode.position = neptune.currentPosition(date: date)
+        
+        // post new date
+        let nc = NotificationCenter.default
+        nc.post(name:Notification.Name(rawValue:"DateChangeNotification"),
+                object: nil,
+                userInfo:["date":date])
     }
 
     func drawOrbit(planet:CelestialBodies, node:CelestialBody) {

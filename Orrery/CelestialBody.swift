@@ -91,6 +91,12 @@ class CelestialBody:NSObject {
         return bodyNode
     }
     
+    func addRingsToSaturn(node:SCNNode) {
+        let ring = SCNNode(geometry: SCNTube(innerRadius: 0.250, outerRadius: 0.400, height: 0.01))
+        node.addChildNode(ring)
+        ring.rotation = SCNVector4Make(1, 0, 0, CGFloat(0.471238898))
+    }
+    
     func currentPosition(date:NSDate) -> SCNVector3 {
         let orbitalPosition:OrbitalPositions = OrbitalPositions()
         let vector = orbitalPosition.cartisianPosition(forPlanet:bodyName.rawValue as Int, at: date as Date!)

@@ -134,6 +134,7 @@ class OrreryViewController: NSViewController {
         scnScene.rootNode.addChildNode(saturn.bodyNode)
         saturn.bodyNode.position = saturn.currentPosition(date: date)
         saturn.bodyNode.rotation = SCNVector4Make(1, 0, 0, CGFloat(Double.pi/2))
+        saturn.addRingsToSaturn(node: saturn.bodyNode)
         drawOrbit(planet: saturn.bodyName, node: saturn)
 
         // uranus
